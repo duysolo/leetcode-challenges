@@ -13,10 +13,14 @@ export function merge(
     const lastElementValue2 = nums2[lastElementIndex2]
 
     if (lastElementIndex1 >= 0 && lastElementValue1 > lastElementValue2) {
-      nums1[lastElementIndexInResult--] = nums1[lastElementIndex1--]
+      nums1[lastElementIndexInResult] = lastElementValue1
+      lastElementIndex1--
     } else {
-      nums1[lastElementIndexInResult--] = nums2[lastElementIndex2--]
+      nums1[lastElementIndexInResult] = lastElementValue2
+      lastElementIndex2--
     }
+
+    lastElementIndexInResult--
   }
 
   console.log(nums1)

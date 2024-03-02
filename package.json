@@ -15,7 +15,7 @@
   },
   "homepage": "https://github.com/duysolo/leetcode-challenges#readme",
   "scripts": {
-    "start": "node ./build",
+    "start": "npm run build && node ./build",
     "format": "prettier --write ./src",
     "lint": "gts lint",
     "test": "vitest run",
