@@ -1,9 +1,9 @@
 import {describe, it, expect, vitest} from 'vitest'
-import {merge} from '../merge-sorted-array'
-// import {merge as workingButNotAccepted} from '../merge-sorted-array.not-accepted'
+import {merge} from '../merge-sorted-array.js'
+import {merge as workingButNotAccepted} from '../merge-sorted-array.not-accepted.js'
 
 handleTestCases(merge, 'Accepted')
-// handleTestCases(workingButNotAccepted, 'Not Accepted')
+handleTestCases(workingButNotAccepted, 'Not Accepted')
 
 function handleTestCases(func: typeof merge, context: string) {
   describe(`88 - Merge Sorted Array - ${context}`, async () => {
