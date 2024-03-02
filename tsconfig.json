@@ -1,6 +1,7 @@
 {
   "extends": "./node_modules/gts/tsconfig-google.json",
   "include": ["src/**/*.ts", "**/__tests__/**/*.ts"],
+  "exclude": ["node_modules", "build", "src/**/*.d.ts"],
   "compilerOptions": {
     /* Visit https://aka.ms/tsconfig to read more about this file */
 

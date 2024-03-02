@@ -5,5 +5,6 @@ module.exports = {
   rules: {
     ...baseConfigs.rules,
     semi: ['error', 'never'],
+    'node/no-unpublished-import': 'off',
   },
 }
