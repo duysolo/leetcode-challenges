@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "description": "LeetCode Challenges",
-  "main": "build/main.js",
+  "main": "build/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/duysolo/leetcode-challenges.git"
@@ -15,14 +15,16 @@
   },
   "homepage": "https://github.com/duysolo/leetcode-challenges#readme",
   "scripts": {
+    "start": "npm run build && node ./build",
     "format": "prettier --write ./src",
     "lint": "gts lint",
     "test": "vitest run",
     "clean": "gts clean",
-    "compile": "tsc",
+    "build": "npm run clean && tsc --build tsconfig.build.json --force",
+    "build:watch": "tsc --build tsconfig.build.json --watch --force",
     "fix": "gts fix",
     "prepare": "husky",
-    "pretest": "npm run compile",
+    "pretest": "npm run build",
     "posttest": "npm run lint"
   },
   "devDependencies": {
@@ -36,5 +38,6 @@
     "ts-node": "^10.9.2",
     "typescript": "~5.1.0",
     "vitest": "^1.3.1"
-  }
+  },
+  "dependencies": {}
 }
