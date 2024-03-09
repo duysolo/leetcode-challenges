@@ -1,4 +1,4 @@
-export function removeElement(nums: number[], val: number) {
+export function removeElement(nums: number[], val: number): number {
   let total = 0
 
   for (let i = 0; i < nums.length; i++) {
@@ -10,8 +10,5 @@ export function removeElement(nums: number[], val: number) {
     }
   }
 
-  // For Leetcode checks
-  // return total
-
-  return {total, nums}
+  return total
 }

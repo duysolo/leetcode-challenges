@@ -1,11 +1,8 @@
-export function removeDuplicates(nums: number[]) {
+export function removeDuplicates(nums: number[]): number {
   const totalItems = nums.length
 
   if (totalItems < 3) {
-    return {
-      total: totalItems,
-      nums,
-    }
+    return totalItems
   }
 
   let validIndex = 0
@@ -26,8 +23,5 @@ export function removeDuplicates(nums: number[]) {
     counter++
   }
 
-  return {
-    total: validIndex + 1,
-    nums,
-  }
+  return validIndex + 1
 }

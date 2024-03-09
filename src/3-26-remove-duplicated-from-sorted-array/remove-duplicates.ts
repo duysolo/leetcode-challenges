@@ -1,4 +1,4 @@
-export function removeDuplicates(nums: number[]) {
+export function removeDuplicates(nums: number[]): number {
   const unique: number[] = []
 
   for (let i = 0; i < nums.length; i++) {
@@ -13,13 +13,10 @@ export function removeDuplicates(nums: number[]) {
     nums[i] = unique[i]
   }
 
-  return {
-    totalUnique: unique.length,
-    nums,
-  }
+  return unique.length
 }
 
-export function removeDuplicates2(nums: number[]) {
+export function removeDuplicates2(nums: number[]): number {
   let i = 0
   let k = i + 1
   const j = nums.length
@@ -33,8 +30,5 @@ export function removeDuplicates2(nums: number[]) {
     }
   }
 
-  return {
-    totalUnique: i + 1,
-    nums,
-  }
+  return i + 1
 }

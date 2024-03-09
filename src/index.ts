@@ -1,5 +1,5 @@
-import {removeElement} from './27-remove-element/remove-element.js'
-import {merge} from './88-merge-sorted-array/merge-sorted-array.js'
+import {removeElement} from './2-27-remove-element/remove-element.js'
+import {merge} from './1-88-merge-sorted-array/merge-sorted-array.js'
 
 merge([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3)
 

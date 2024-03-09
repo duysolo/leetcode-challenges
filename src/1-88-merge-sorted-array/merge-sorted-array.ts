@@ -1,3 +1,17 @@
+/**
+ * Merge nums2 into nums1 as one sorted array.
+ *
+ * The number of elements initialized in nums1 and nums2 are m and n respectively.
+ *
+ * You may assume that nums1 has a size equal to m + n such that it has enough space to hold additional elements from nums2.
+ *
+ * @param nums1 - An array of integers
+ * @param m - The number of elements initialized in nums1
+ * @param nums2 - An array of integers
+ * @param n - The number of elements initialized in nums2
+ *
+ * @returns void
+ */
 export function merge(
   nums1: number[],
   m: number,
@@ -32,8 +46,6 @@ export function merge(
       `Invalid input: nums1.length must be equal to ${m + n} after merging the arrays`
     )
   }
-
-  console.log(nums1)
 }
 
 /**
@@ -78,8 +90,6 @@ export function merge2(
   for (let i = 0; i < m + n; i++) {
     nums1[i] = mergedArray[i]
   }
-
-  console.log(nums1)
 }
 
 export function merge3(
@@ -96,8 +106,6 @@ export function merge3(
   for (let i = 0; i < m + n; i++) {
     nums1[i] = mergedArray[i]
   }
-
-  console.log(nums1)
 }
 
 function detachArr(nums: number[], totalItemsToGet: number): number[] {
