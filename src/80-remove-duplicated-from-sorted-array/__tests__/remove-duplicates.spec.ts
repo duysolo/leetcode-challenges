@@ -39,6 +39,8 @@ function handleTestCases(func: typeof removeDuplicates, context: string) {
     it('test case 5', () => {
       const {total, nums} = func([1, 2, 2])
 
+      console.log(nums)
+
       expect(total).toEqual(3)
       expect(isArrayEqual(nums, [1, 2, 2])).toEqual(true)
     })

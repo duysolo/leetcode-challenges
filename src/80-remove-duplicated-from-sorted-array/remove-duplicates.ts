@@ -8,23 +8,26 @@ export function removeDuplicates(nums: number[]) {
     }
   }
 
-  let currIndex = 0
-  let i = 1
+  let validIndex = 0
+
   let sameValue = 1
 
-  while (i < totalItems) {
-    // If the current value is different from the previous one, reset the counter
-    sameValue = nums[currIndex] !== nums[i] ? 1 : sameValue + 1
+  let counter = 1
+
+  while (counter < totalItems) {
+    sameValue = nums[counter] === nums[counter - 1] ? sameValue + 1 : 1
 
     if (sameValue <= 2) {
-      nums[++currIndex] = nums[i]
+      validIndex++
+
+      nums[validIndex] = nums[counter]
     }
 
-    i++
+    counter++
   }
 
   return {
-    total: ++currIndex,
+    total: validIndex + 1,
     nums,
   }
 }
