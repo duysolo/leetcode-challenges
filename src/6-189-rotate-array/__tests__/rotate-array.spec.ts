@@ -1,7 +1,8 @@
 import {describe, expect, it} from 'vitest'
-import {rotate} from '../rotate-array.js'
+import {rotate, rotateV2} from '../rotate-array.js'
 
 handleTestCases(rotate, 'Use temp array and copy back to original array')
+handleTestCases(rotateV2, 'Reverse array')
 
 function handleTestCases(func: typeof rotate, context: string) {
   describe(`189 - Rotate Array - ${context}`, async () => {
