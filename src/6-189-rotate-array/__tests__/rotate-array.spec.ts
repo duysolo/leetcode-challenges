@@ -21,5 +21,14 @@ function handleTestCases(func: typeof rotate, context: string) {
 
       expect(JSON.stringify(nums)).toEqual(JSON.stringify([3, 99, -1, -100]))
     })
+
+    it('test case 3', () => {
+      const nums = [1, 2, 3, 4, 5, 6, 7]
+      func(nums, 9)
+
+      expect(JSON.stringify(nums)).toEqual(
+        JSON.stringify([1, 2, 3, 4, 5, 6, 7])
+      )
+    })
   })
 }

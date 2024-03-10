@@ -5,6 +5,8 @@ export function rotate(nums: number[], k: number): void {
   const len = nums.length
   const arr = [...nums]
 
+  k = k <= len ? k : len
+
   for (let step = 0; step < k; step++) {
     arr.unshift(arr.pop() as number)
   }
@@ -16,7 +18,8 @@ export function rotate(nums: number[], k: number): void {
 
 export function rotateV2(nums: number[], k: number): void {
   const len = nums.length
-  k = k % len
+
+  k = k <= len ? k : len
 
   /**
    * 1. We reverse the entire array. This effectively moves the last k elements to the front.
